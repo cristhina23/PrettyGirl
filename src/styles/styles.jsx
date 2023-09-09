@@ -19,3 +19,9 @@ const styles = {
 };
 
 export default styles;
+
+export const isActiveStyles =
+  "text-md text-pink-300 font-semibold hover:text-pink-700 px-4 py-2 duration-100  transition-all ease-in-out cursor-pointer hover:scale-110";
+
+export const isNoActiveStyles =
+  "text-sm text-pink-500 hover:text-pink-700 px-4 py-2  duration-100 transition-all ease-in-out cursor-pointer hover:scale-110";

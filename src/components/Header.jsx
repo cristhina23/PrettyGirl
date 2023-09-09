@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import styles from "../styles/styles";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
-import { categoriesData, productData } from "../static/Data";
+import { categoriesData, productData, userDropDownLinks } from "../static/Data";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { HiOutlineUser } from "react-icons/hi";
 import { AiOutlineHeart, AiOutlineUser, AiOutlineMenu } from "react-icons/ai";
 import Navbar from "../components/Navbar";
 import { BiMenuAltLeft } from "react-icons/bi";
+import DropDown from "./DropDown";
 
 const Header = ({ activeHeading }) => {
   const [user, setUser] = useState(false);
@@ -137,25 +138,25 @@ const Header = ({ activeHeading }) => {
         >
           {/* categories */}
           <div onClick={() => setDropDown(!dropDown)}>
-            <div className='relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block '>
+            <div className='relative h-[60px] mt-[10px] w-[270px] 1000px:block '>
               <BiMenuAltLeft
                 size={30}
                 className='absolute top-3 left-2'
               />
               <button
-                className={`h-[100%] w-full flex justify-between items-center pl-10 bg-white  font-sans text-lg font[500] select-none rounded-t-md `}
+                className={`h-[83%] w-[80%] flex justify-between items-center pl-10 bg-pink-100  font-sans text-md font[500] select-none rounded-t-md `}
               >
                 All Categories
               </button>
               <IoIosArrowDown
                 size={20}
-                className='absolute right-2 top-4 cursor-pointer'
+                className='absolute right-16 top-4 cursor-pointer'
                 onClick={() => setDropDown(!dropDown)}
               />
               {dropDown ? (
                 <DropDown
-                  categoriesData={categoriesData}
                   setDropDown={setDropDown}
+                  categoriesData={categoriesData}
                 />
               ) : null}
             </div>

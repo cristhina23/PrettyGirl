@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "../../styles/styles";
+import styles from "../styles/styles";
+import { categoriesData } from "../static/Data";
 
 const DropDown = ({ categoriesData, setDropDown }) => {
   const navigate = useNavigate();

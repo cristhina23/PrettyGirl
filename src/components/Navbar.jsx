@@ -1,31 +1,55 @@
-import React from "react";
-import styles from "../styles/styles";
-import { navItems } from "../static/Data";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import styles, { isActiveStyles, isNoActiveStyles } from "../styles/styles";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = ({ active }) => {
+  const [isMenu, setIsMenu] = useState(false);
   return (
     <div className={`${styles.normalFlex} h-7`}>
-      {navItems &&
-        navItems.map((i, index) => (
-          <div
-            className='flex '
-            key={i.id}
+      <nav className='flex items-center'>
+        <ul className=' hidden md:flex items-center justify-center gap-8  '>
+          <NavLink
+            to='/'
+            className={({ isActive }) =>
+              isActive ? isActiveStyles : isNoActiveStyles
+            }
           >
-            <Link
-              to={i.url}
-              className={`${
-                active === index + 1
-                  ? "text-pink-600 font-extrabold"
-                  : "text-[#fff]"
-              } font-bold px-6 cursor-pointer`}
-            >
-              <span className='cursor-pointer hover:underline hover:text-pink-500 '>
-                {i.title}
-              </span>
-            </Link>
-          </div>
-        ))}
+            Inicio
+          </NavLink>
+          <NavLink
+            to='/about'
+            className={({ isActive }) =>
+              isActive ? isActiveStyles : isNoActiveStyles
+            }
+          >
+            Nosotros
+          </NavLink>
+          <NavLink
+            to='/products'
+            className={({ isActive }) =>
+              isActive ? isActiveStyles : isNoActiveStyles
+            }
+          >
+            Productos
+          </NavLink>
+          <NavLink
+            to='/blogs'
+            className={({ isActive }) =>
+              isActive ? isActiveStyles : isNoActiveStyles
+            }
+          >
+            Blog
+          </NavLink>
+          <NavLink
+            to='/contactanos'
+            className={({ isActive }) =>
+              isActive ? isActiveStyles : isNoActiveStyles
+            }
+          >
+            Contactanos
+          </NavLink>
+        </ul>
+      </nav>
     </div>
   );
 };

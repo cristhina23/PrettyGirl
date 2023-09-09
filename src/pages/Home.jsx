@@ -4,17 +4,18 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Categories from "../components/Categories";
 import Productos from "../components/Productos";
+import Meta from "../components/Meta";
 
 const Home = () => {
   return (
     <>
-      <Header activeHeading={1} />
+      <Meta title={"PG | Home"} />
+
       <main>
         <Hero />
         <Categories />
         <Productos />
       </main>
-      <Footer />
     </>
   );
 };

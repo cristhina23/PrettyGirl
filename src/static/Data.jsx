@@ -7,7 +7,7 @@ export const navItems = [
   {
     id: 2,
     title: "Nosotros",
-    url: "/nosotros",
+    url: "/about",
   },
   {
     id: 3,
@@ -197,29 +197,25 @@ export const categoriesData = [
     id: 1,
     title: "Vestidos",
     subTitle: "",
-    image_Url:
-      "https://cdn.shopify.com/s/files/1/1706/9177/products/NEWAppleMacbookProwithM1ProChip14InchLaptop2021ModelMKGQ3LL_A_16GB_1TBSSD_custommacbd.jpg?v=1659592838",
+    image_Url: "../assets/icons/vestidos.svg",
   },
   {
     id: 2,
     title: "cosmetics and body care",
     subTitle: "",
-    image_Url:
-      "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/kosme1.png",
+    image_Url: "short",
   },
   {
     id: 3,
     title: "Accesories",
     subTitle: "",
-    image_Url:
-      "https://img.freepik.com/free-vector/ordering-goods-online-internet-store-online-shopping-niche-e-commerce-website-mother-buying-babies-clothes-footwear-toys-infant-accessories_335657-2345.jpg?w=2000",
+    image_Url: "coat",
   },
   {
     id: 4,
     title: "Cloths",
     subTitle: "",
-    image_Url:
-      "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+    image_Url: "jacket",
   },
   {
     id: 5,
@@ -647,5 +643,23 @@ export const footerSupportLinks = [
   },
   {
     name: "Live chat",
+  },
+];
+
+export const userDropDownLinks = [
+  {
+    name: "profile",
+  },
+  {
+    name: "Dashboard",
+  },
+  {
+    name: "Wishlist",
+  },
+  {
+    name: "Shipping",
+  },
+  {
+    name: "Logout",
   },
 ];
